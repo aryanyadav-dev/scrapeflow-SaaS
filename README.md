@@ -45,8 +45,8 @@ FlowScrape's credit-based system allows you to manage workflow executions effici
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/ai-web-scraper-builder.git
-   cd ai-web-scraper-builder
+   git clone https://github.com/yourusername/scrapeflow.git
+   cd scrapeflow
    ```
 
 2. **Install dependencies**
