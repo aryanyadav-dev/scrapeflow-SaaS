@@ -1,0 +1,17 @@
+Steps to add new task NEW_TASK:
+
+1. add NEW_TASK in TaskType (types/task.ts)
+2. create NEW_TASK, update inputs/outputs for NEW_TASK, if needed (lib/workflow/task)
+3. add NEW_TASK to TaskRegistry (lib/workflow/task/registry.tsx)
+4. add NEW_TASK to TaskMenu (app/workflow/_components/task-menu.tsx)
+5. create executor for NEW_TASK (lib/workflow/executor)
+6. add executor for NEW_TASK to ExecutorRegistry (lib/workflow/executor/registry.ts)
+
+
+
+Steps to add new param NEW_PARAM for new task NEW_TASK:
+
+1. add NEW_PARAM in TaskParamType (types/task.ts)
+2. create NEW_PARAM (app/workflow/_components/nodes/param)
+3. add NEW_PARAM to switch-case of NodeParamField (app/workflow/_components/nodes/node-param-field.tsx)
+4. add color of handle for NEW_PARAM in ColorForHandle (app/workflow/_components/nodes/common.tsx)
