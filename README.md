@@ -1,6 +1,6 @@
-# FlowScrape
+# ScrapeFlow
 
-FlowScrape is a powerful SaaS platform for workflow automation with integrated web scraping capabilities. Built on Next.js, FlowScrape lets users automate complex data extraction workflows, securely store credentials, manage billing, and monitor performance—all in one intuitive interface.
+ScrapeFlow is a powerful SaaS platform for workflow automation with integrated web scraping capabilities. Built on Next.js, FlowScrape lets users automate complex data extraction workflows, securely store credentials, manage billing, and monitor performance—all in one intuitive interface.
 
 ![FlowScrape1_screenshot](/public/preview/preview_1.png)
 
@@ -41,18 +41,78 @@ FlowScrape is a powerful SaaS platform for workflow automation with integrated w
 
 FlowScrape's credit-based system allows you to manage workflow executions efficiently. The Stripe integration provides transparent billing, letting you track usage and manage subscriptions.
 
-## 📅 Beta Features
+### Steps
 
-Our **AI-powered web scraping** feature is currently in beta, offering smart scraping capabilities to navigate complex pages. Join the beta to be among the first to test this groundbreaking tool!
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/ai-web-scraper-builder.git
+   cd ai-web-scraper-builder
+   ```
 
-## 🪪 License
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Distributed under the MIT License. See `LICENSE` for more information.
+3. **Set up environment variables**
+   Create a `.env` file in the root directory and add the following:
+   ```env
+   NEXT_PUBLIC_OPENAI_API_KEY=your_openai_api_key
+   DATABASE_URL=postgresql://username:password@localhost:5432/yourdb
+   NEXTAUTH_SECRET=your_nextauth_secret
+   NEXTAUTH_URL=http://localhost:3000
+   ```
 
-## 🌎 View Demo
+4. **Run database migrations**
+   ```bash
+   npx prisma migrate dev
+   ```
 
-Live Demo: [https://samrat-flowscrape.vercel.app/](https://samrat-flowscrape.vercel.app)
+5. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+   The app will be available at `http://localhost:3000`.
 
-## 📞 Contact
+---
 
-Your Name - [Samrat Sadhu](https://samrat-sadhu-portfolio.vercel.app/) - ss2414@ece.jgec.ac.in
+## Usage
+
+### 1. **Sign Up/Log In**
+   - Use NextAuth.js to sign up or log in to your account.
+
+### 2. **Create a Workflow**
+   - Drag and drop nodes to define scraping tasks.
+   - Use AI suggestions for selector optimization.
+
+### 3. **Set Credentials**
+   - Securely store website login credentials if required.
+
+### 4. **Schedule Scraping**
+   - Use the scheduling feature to automate scraping tasks.
+
+### 5. **Export Data**
+   - Download scraped data in the desired format.
+
+---
+
+## Development
+
+### Scripts
+- **Start development server**: `npm run dev`
+- **Build for production**: `npm run build`
+- **Run production server**: `npm start`
+
+### Linting and Formatting
+- **Lint code**: `npm run lint`
+- **Format code**: `npm run format`
+
+---
+
+## Roadmap
+- Add support for multi-step scraping workflows.
+- Integrate more export formats (e.g., Google Sheets, Excel).
+- Enhance AI capabilities for broader use cases.
+
+
+
